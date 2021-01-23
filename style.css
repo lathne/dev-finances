@@ -1,6 +1,9 @@
 /* Global ==================== */
 :root {
     --dark-blue: #363f5f;
+    --green: #2aa04e;
+    --light-green: #3DD705;
+    --red: #e92929;
 }
 * {
     margin: 0;
@@ -47,17 +50,58 @@ h2 {
 /* Links & Buttons ==================== */
 
 a {
-    color: #49AA26;
+    color: var(--green);
     text-decoration: none;
 }
 
 a:hover {
-    color: #3DD705;
+    color: var(--light-green);
 }
 
 .button.new {
     display: inline-block;
     margin-bottom: .8rem;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+
+    color: white;
+    background: var(--green);
+
+    padding: 0;
+    border-radius: 0.25rem;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--light-green);
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+}
+
+.button.cancel {
+    color: var(--red);
+    border: 2px var(--red) solid;
+    border-radius: 0.25rem;
+
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button.cancel:hover {
+    opacity: 1;
 }
 
 /* Header ==================== */
@@ -113,7 +157,7 @@ header {
 }
 
 .card.total {
-    background: #2aa04e;
+    background: var(--green);
     color: white;
 }
 
@@ -236,7 +280,10 @@ input {
     align-items: center;
 }
 
-
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}
 
 /* Footer ==================== */
 
